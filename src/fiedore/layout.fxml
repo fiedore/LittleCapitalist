@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10" prefHeight="264.0" prefWidth="448.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiedore.controller.Controller">
+   <rowConstraints>
+      <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="32.0" />
+      <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="28.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="80.0" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints maxWidth="40.0" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints maxWidth="40.0" minWidth="10.0" />
+      <ColumnConstraints maxWidth="40.0" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints maxWidth="60.0" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <children>
+      <TextField fx:id="oneAmount" prefHeight="25.0" prefWidth="132.0" GridPane.columnIndex="2" />
+      <TextField fx:id="twoAmount" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextField fx:id="threeAmount" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label text="Cars" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Lato Semibold" size="12.0" />
+         </font>
+      </Label>
+      <Label text="Houses" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Label alignment="CENTER" text="Tools" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Label fx:id="oneShop" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Label fx:id="twoShop" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Label fx:id="threeShop" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#buyAll" text="Buy" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Label fx:id="oneHas" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Label fx:id="twoHas" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Label fx:id="threeHas" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</GridPane>
