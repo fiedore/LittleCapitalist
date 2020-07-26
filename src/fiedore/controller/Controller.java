@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.util.converter.NumberStringConverter;
 
 import java.text.NumberFormat;
@@ -32,6 +33,7 @@ public class Controller {
     private final int COMM1AMOUNT = 50;
     private final int COMM2AMOUNT = 30;
     private final int COMM3AMOUNT = 500;
+    public GridPane rooted;
 
     private List<Commodity> commodities;
 
@@ -79,13 +81,29 @@ public class Controller {
 
     }
 
-
-    public void buyAll(ActionEvent actionEvent) {
+    public void buyOne(ActionEvent actionEvent) {
         int amount = Integer.parseInt(oneAmount.getText());
         int current = Integer.parseInt(oneHas.getText());
         int currentShop = Integer.parseInt(oneShop.getText());
+
+        if (currentShop<amount){
+            return;
+        }
+
+        if (amount <0){
+            oneAmount.setText("0");
+            amount = 0;
+        }
+
         oneHas.setText(String.valueOf(current + amount));
         oneShop.setText(String.valueOf(currentShop - amount));
         System.out.println(commodities.get(0).amountProperty());
+    }
+
+    public void buyTwo(ActionEvent actionEvent) {
+    }
+
+    public void buyThree(ActionEvent actionEvent) {
+
     }
 }
